@@ -64,9 +64,7 @@ class Cleverbot:
         try:
             self._update_cookies(requests.get(Cleverbot.PROTOCOL + Cleverbot.HOST))
         except:
-            # TODO errors shouldn't pass unnoticed, 
-            # here and in other places as well
-            return str()
+            pass
 
     def _update_cookies(res):
         for p in [res] + res.history[::-1]:
